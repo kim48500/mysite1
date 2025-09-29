@@ -1,0 +1,114 @@
+/*공통스타일*/
+*{
+    margin: 0; padding: 0;
+}
+
+/*모바일기준*/
+#container{
+    width :100%;
+}
+/*#header*/
+header{
+ height: 320px;
+}
+header nav{
+    height: 60px;
+    background-color: #000;
+}
+nav #main-nav {
+    text-align: center;
+}
+nav #main-nav li {
+    display: inline-block;
+    line-height: 60px;
+    padding: 0 20px;
+
+}
+nav #main-nav li a{
+    text-decoration: none;
+    color: #FFF;
+}
+nav #main-nav li:hover{background-color: orange;}
+header nav{
+height: 60px;
+background-color: #000;
+}
+#main-pic img{
+    height: 260px;
+    width: 100%;
+
+}
+/* section 영역*/ 
+section{
+height: 320px;
+padding: 10px 5%;/*좌부 여백을 브라우저크기의 가변크기*/
+}
+section:nth-of-type(2n){background-color: #eee;} 
+section .page-title{margin:20px 0;}
+section p{line-height: 2.5;}
+section .content .photo{ display:none;
+
+}
+/*section -choice8*/
+#choice .content h2{margin-bottom: 20px;}
+#choice .content ol{padding-left: 30px;}
+#choice .content ol li{line-height: 2;}
+/*footer영역*/
+footer{
+    height: 80px;
+    border-top: 2px solid #444;
+    background-color: #f4f4f4;
+}
+footer #bottom-menu{
+    list-style: none;
+    margin: 10px 20px;
+    text-align: center;
+
+}
+#bottom-menu li{
+    display: inline-block;
+    padding:  0 10px;
+    border-right:  2px solid #ccc;
+}
+/*사이드맵 우측의 바*/
+#bottom-menu li:last-child{border: none;}
+#bottom-menu li a{
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9em;/*1em-16*/
+}
+/* 태블릿기준*/
+@media screen and (min-width: 780px){
+    #container{
+        width: 780px;
+        margin: 0 auto;
+    }
+    header{height: 360px;}
+    #main-pic img{height: 300px;}
+    section{
+        height: 400px; padding: 20px 5%;
+    }
+    section .content .photo{
+        display: block;
+        float: right;
+        width: 40%;
+    }
+    section .content .text{
+        width: 55%;
+        float: left;
+    }
+   footer #bottom-menu la a{font-size: 1em;}
+}
+/*pc 기준*/
+@media screen and (min-width:1200px) {
+#container{
+    width:1200px;
+    margin: 0 auto;
+}
+header{height: 400px;}
+#main-pic img{height: 340px;}
+nav #main-nav li{padding: 0 40px;}
+section{height: 400px;
+padding: 30px 5%;}
+}
+    
