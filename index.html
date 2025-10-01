@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>자기소개 — 반응형 템플릿</title>
+  <title>My Profile</title>
   <meta name="description" content="간단하고 가볍게 쓸 수 있는 반응형 자기소개 템플릿" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,6 +13,7 @@
     <div class="nav-inner">
       <div class="brand">김성진</div>
       <div class="spacer"></div>
+      <div id="demo"></div>
       <nav class="menu">
         <a href="#about">소개</a>
         <a href="#skills">기술</a>
@@ -72,16 +73,16 @@
             <h3>무비 검색 웹앱</h3>
             <p>TMDB API로 검색/상세/즐겨찾기 구현(React). 반응형 UI, 라우팅 포함.</p>
             <div>
-              <a href="#">GitHub</a>
-              <a href="#">Demo</a>
+              <a href="https://github.com/kim48500">GitHub</a>
+            
             </div>
           </article>
           <article class="project">
             <h3>Todo + 메모 공유</h3>
             <p>인증, CRUD, 공유 링크 기능(React + Spring Boot + MySQL).</p>
             <div>
-              <a href="#">GitHub</a>
-              <a href="#">Demo</a>
+              <a href="https://github.com/kim48500">GitHub</a>
+            
             </div>
           </article>
         </div>
@@ -91,13 +92,14 @@
         <div class="hd"><h2 id="contact-h">연락</h2></div>
         <div class="bd">
           프로젝트/협업 제안 환영합니다. <br/>
-          이메일: <a href="mailto:your@mail.com"></a>
+          이메일: <a href="https:/www.naver.com">ksj48500@naver.com
+          </a>
         </div>
       </section>
     </section>
 
     <footer>
-      © <span id="year"></span> Your Name — 마지막 업데이트: <time id="ts"></time>
+      © <span id="year"></span> 김성진 — 마지막 업데이트: <time id="ts"></time>
     </footer>
   </main>
 
@@ -108,6 +110,10 @@
     const d = new Date();
     y.textContent = d.getFullYear();
     ts.textContent = new Intl.DateTimeFormat('ko', { dateStyle: 'medium' }).format(d);
+   ;
+    let demo=document.querySelector("#demo")
+    const now=new Date();
+    demo.innerHTML=`현재 시간: ${now.toLocaleTimeString()}<br>`;
   </script>
 </body>
 </html>
