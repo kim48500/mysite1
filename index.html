@@ -1,92 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cafe12사이트입니다</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>자기소개 — 반응형 템플릿</title>
+  <meta name="description" content="간단하고 가볍게 쓸 수 있는 반응형 자기소개 템플릿" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body> <div id="container">
-    <header>    
-        <nav>
-                <ul id="main-nav">
-                    <li><a href="#intro">카페소개</a></li>
-                    <li><a href="#choice">이달의 추천 </a></li>
-                    <li><a href="#map">오시는 길</a></li>
-                    
-                </ul>
-        </nav>
-        <div id="main-pic">
-            <img src="images/header0.jpg" alt="메인배경">
+<body>
+  <!-- 헤더 -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">김성진</div>
+      <div class="spacer"></div>
+      <nav class="menu">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#contact">연락</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <!-- 히어로 -->
+    <section id="about" class="hero">
+      <!-- 프로필 이미지를 쓰려면 아래 div 대신 img 사용:
+           <img src="images/profile.jpg" alt="프로필" class="avatar"> -->
+      <div class="avatar" aria-hidden="true">YN</div>
+      <div>
+        <h1>안녕하세요!  김성진입니다 👋</h1>
+        <p>웹 개발 지망생 · React & Spring Boot · 일본 IT 취업 목표</p>
+        <div class="chips" aria-label="키워드">
+          <span class="chip">React</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">일본어 학습</span>
         </div>
+      </div>
+    </section>
 
-    </header>
-    <main id = "main">
-        <section id ="intro">
-          <div class="page-title"><h1>카페소개</h1>
+    <!-- 그리드: 좌(소개+프로젝트), 우(스킬+연락) -->
+    <section class="grid">
+      <section class="card" aria-labelledby="intro-h">
+        <div class="hd"><h2 id="intro-h">소개</h2></div>
+        <div class="bd">
+          꾸준히 만들고 기록하는 것을 좋아합니다. 작은 프로젝트를 반복적으로 개선하며
+          프론트엔드/백엔드 전반을 익히고 있습니다. 협업과 문서화를 중요하게 생각합니다.
         </div>
-        <div class="content">
-            <!-----포토-->
-            <div class="photo">
-                <img src="images/cup-1.jpg" alt="컵">
+      </section>
+
+      <section id="skills" class="card" aria-labelledby="skills-h">
+        <div class="hd"><h2 id="skills-h">기술</h2></div>
+        <div class="bd">
+          <div class="chips">
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">JavaScript(ES6+)</span>
+            <span class="chip">React</span>
+            <span class="chip">Java</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Git/GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="card" aria-labelledby="projects-h">
+        <div class="hd"><h2 id="projects-h">프로젝트</h2></div>
+        <div class="bd">
+          <article class="project">
+            <h3>무비 검색 웹앱</h3>
+            <p>TMDB API로 검색/상세/즐겨찾기 구현(React). 반응형 UI, 라우팅 포함.</p>
+            <div>
+              <a href="#">GitHub</a>
+              <a href="#">Demo</a>
             </div>
-            <!-----text-->
-            <div class="text">
-            <p>영업시간: 오전9시~밤9시</p>
-            <p>휴무:매주 토일 <br>
-            <i><small>(금요일이 공휴일이면 토요일날 영업)</small></i></p>
-        </div></div>
-          
-        </section>
-        <section id ="choice">
-          <div class="page-title"><h1>이달의 추천</h1>
-        </div>
-        <div class="content">
-            <!-----포토-->
-            <div class="photo">
-                <img src="images/cup-2.jpg" alt="컵">
+          </article>
+          <article class="project">
+            <h3>Todo + 메모 공유</h3>
+            <p>인증, CRUD, 공유 링크 기능(React + Spring Boot + MySQL).</p>
+            <div>
+              <a href="#">GitHub</a>
+              <a href="#">Demo</a>
             </div>
-            <!-----text-->
-            <div class="text">
-                <h2>핸드 드립 아이스커피</h2>
-                <ol>
-                    <li>1인분 기준으로  서버에 각얼음 5조각(한조각의 20CC) 넣고 추출을 시작한다</li>
-                    <li>평상시 보다 원두의 양은 2배정도(20g)와 추출액은 얼음포함해서 200cc까지 기달린다</li>
-                    <li>아이스잔에 얼음6~7 개넣어서 시원하게 나온다</li>
-                </ol>
-            
+          </article>
         </div>
-        </div>
-          
-        </section>
-        <section id ="map">
-          <div class="page-title"><h1>오시는 길</h1>
-        </div>
-        <div class="content">
-            <!-----포토-->
-            <div class="photo">
-                <img src="images/map.png" alt="카페약도">
-            </div>
-            <!-----text-->
-            <div class="text">
-            <p>서울시 금천구 가산디지털단지로</p>
-            <p>8번출구 <br>
-           
-        </div></div>
-          
-        </section>
+      </section>
 
+      <section id="contact" class="card" aria-labelledby="contact-h">
+        <div class="hd"><h2 id="contact-h">연락</h2></div>
+        <div class="bd">
+          프로젝트/협업 제안 환영합니다. <br/>
+          이메일: <a href="mailto:your@mail.com"></a>
+        </div>
+      </section>
+    </section>
 
-    </main>
-</div>
     <footer>
-        <ul id="bottom-menu">
-            <li><a href="">카페소개</a></li>
-            <li><a href="">개인정보처리방침</a></li>
-            <li><a href="">이용약관</a></li>
-            <li><a href="">사이트맵</a></li>
-        </ul>
+      © <span id="year"></span> Your Name — 마지막 업데이트: <time id="ts"></time>
     </footer>
+  </main>
+
+  <script>
+    // 연도/업데이트 표기
+    const y = document.getElementById('year');
+    const ts = document.getElementById('ts');
+    const d = new Date();
+    y.textContent = d.getFullYear();
+    ts.textContent = new Intl.DateTimeFormat('ko', { dateStyle: 'medium' }).format(d);
+  </script>
 </body>
 </html>
